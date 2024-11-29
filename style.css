@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: #000000;
+    margin: 2rem 2rem;
+    z-index: 3;
+    border-radius: 20px;
+    position: sticky;
+    top: 0;
+    gap: 5rem;
+}
+.logo h3{
+    width: 300px;
+    font-weight: bolder;
+}
+.logo a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.nav-links li {
+    margin-left: 1.5rem;
+    transform: scale(1) translate(0, -5px);
+    transition-duration: 0.5s;
+}
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu-icon span {
+    height: 3px;
+    width: 25px;
+    background-color: #ffffff;
+    margin: 4px;
+    transition: 0.3s;
+}
+@media (max-width: 850px) {
+   .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #0000005b;
+      border-radius: 50px;
+}
+    .nav-links li {
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+}
+    .nav-links li:hover{
+        transition-duration: 0.5s;
+        transform: translate(0, -10px);
+    }
+    .menu-icon {
+      display: flex;
+}
+  
+    .nav-links.active {
+      display: flex;
+}
+    .BlackFriday{
+        opacity: 0;
+    }
+} 
+.logo{
+    width: 100px;
+}
+.new{
+    position: relative;
+}
+.new::before{
+    content: 'New';
+    position: absolute;
+    top: -1rem;
+    left: 4rem;
+    width: 2rem;
+    height: 1.5rem;
+    font-size: smaller;
+    background-color: rgb(241, 33, 33);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.nav_icons{
+    display: flex;
+    gap: 0rem;
+    margin-left: 3rem;
+}
+.nav_icons img{
+    width: 30px;
+}
+.first_banner{
+    width: 140vh;
+    height: 70vh;
+    border: #000000 solid 2px;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center; 
+    position: relative; 
+}
+.first_banner h1:nth-child(1){
+    font-size: 30px;
+    color: #ffffff;
+    
+}
+.first_banner h1:nth-child(2){
+    font-size: 50px;
+    color: #ffffff;
+}
+.first_banner h1:nth-child(3){
+    font-size: 150px;
+    color: #ffffff;
+}
+.first_banner h1:nth-child(4){
+    font-size: 30px;
+    color: #ffffff;
+}
+.first_banner h1:nth-child(5){
+    font-size: 30px;
+    color: #ffffff;
+}
+.main{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.space{
+    height: 20vh;
+}
+.wear_style{
+    width: 100%;
+    height: 7rem;
+    background-color: #cecece;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+.wear_style button{
+    width: 13rem;
+    height: 3rem;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+
+}
+.wear_style a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bolder;
+}
+.wear_style button:hover{
+    transition-duration: 0.5s;
+    transform: translate(0, -10px);
+    background-color: #9e9d9d;
+}
+.Years_deal{
+    width: 100%;
+    height: 9rem;
+    background-color: rgb(1, 41, 5);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Years_deal .h1{
+    color: #cecece;
+}
+.Years_deal button{
+    width: 9rem;
+    height: 2rem;
+    background-color: rgb(1, 41, 5);
+    border-radius: 20px;
+    border: #ffffff solid 2px;
+    cursor: pointer;
+}
+@media (max-width: 417px){
+    .menu-icon{
+        position: relative;
+        left: -5rem;
+    }
+    .wear_style{
+        display: flex;
+        overflow-x: scroll;
+    }
+    .option{
+        height: 110%;
+    }
+    .Years_deal{
+        display: flex;
+        flex-direction: column;
+    }
+}  
+.product {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+}
+.ProductContainer {
+    display: inline-block; 
+    width: 500px; 
+    height: 500px; 
+    background-color: #f0f0f0; 
+    border: 1px solid #aaa; 
+    margin-right: 10px; 
+    text-align: center; 
+    position: relative;
+}
+.ProductContainer .img{
+     width: 250px;
+}
+.ProductContainer .h11{
+    text-decoration:line-through;
+}
+.cart{
+    width: 50px;
+    position: absolute;
+    left: 80%;
+    top: 90%;
+
+}
+.h12{
+    color: brown;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background: url('banner.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.banner-content {
+    max-width: 600px;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.banner button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #ff6347;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.banner button:hover {
+    background-color: #e55337;
+}
+@media (max-width: 768px) {
+    .banner {
+        height: 60vh;
+    }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+    }
+
+    .banner button {
+        padding: 0.8rem 1.6rem;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 480px) {
+    .banner {
+        height: 50vh;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .banner button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}
